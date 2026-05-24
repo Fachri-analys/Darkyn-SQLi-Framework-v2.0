@@ -78,83 +78,122 @@ darkyn-framework/
 │   │   ├── exceptions.py       # Custom exceptions
 │   │   └── types.py            # Enums & data classes
 │   ├── attack/
-│   │   ├── injection_engine.py # SQLi detection
-│   │   ├── payloads.py         # Payload arsenal
-│   │   ├── polymorphic.py      # Obfuscation engine
-│   │   ├── union_extractor.py  # Union-based discovery
-│   │   ├── time_blind_extractor.py # Binary search time-based
-│   │   ├── waf_detector.py     # WAF fingerprinting (15+ vendor)
-│   │   ├── dns_tunnel.py       # DNS exfiltration
-│   │   └── report_generator.py # HTML/JSON reports
-│   ├── cli.py                  # Command-line interface
-│   └── framework.py            # Main framework class
-├── tests/                      # Unit tests (pytest)
-├── examples/                   # Usage examples
-├── docs/                       # Full documentation
-├── requirements.txt
-└── CHANGELOG.md
+│   │   ├── __init__.py
+│   │   ├── injection_engine.py       # SQLi detection & exploitation
+│   │   ├── payloads.py               # Payload arsenal
+│   │   ├── polymorphic.py            # Obfuscation engine
+│   │   ├── union_extractor.py        # Union-based extraction
+│   │   ├── time_blind_extractor.py   # Binary search time-based
+│   │   └── dns_tunnel.py             # DNS exfiltration
+│   │
+│   ├── cli.py                        # Command-line interface
+│   └── framework.py                  # Main framework class
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_crypto.py                # Quantum crypto tests
+│   ├── test_payloads.py              # Payload tests
+│   ├── test_polymorphic.py           # Obfuscation tests
+│   └── test_binary_search.py         # Binary search algorithm
+│
+├── examples/
+│   ├── basic_usage.py                # Contoh dasar
+│   ├── blind_extraction.py           # Time-based blind demo
+│   └── full_attack.py                # Full automated attack
+│
+└── docs/
+    ├── INSTALL.md                    # Installation guide
+    ├── USAGE.md                      # Detailed usage
+    ├── API.md                        # API reference
+    └── BUGFIXES.md                   # Daftar bug fixes v2
 ```
 
----
+## 🔒 .gitignore
 
-## 📄 Report Output
+```
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-Setiap scan menghasilkan laporan HTML profesional:
+# Virtual env
+venv/
+ENV/
+env/
 
-- Target info & scan metadata
-- WAF detection result
-- Per-finding detail: parameter, teknik, CVSS score
-- Evidence (request + response snippet)
-- Remediation recommendation
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local config (CRITICAL - never commit!)
+config.local.json
+.env
+.env.local
+secrets.json
+credentials.json
+*.pem
+*.key
+*.crt
+
+# Target/victim info (never commit!)
+targets.json
+results/
+dumps/
+exfil/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+logs/
+```
+
+## 🔧 Requirements
+
+```
+cryptography>=41.0.0
+requests>=2.31.0
+dnspython>=2.4.0
+curl-cffi>=0.5.0  # TLS fingerprint (optional, fallback ke requests)
+pytest>=7.4.0
+```
+
+## ⚡ Quick Start
 
 ```bash
-python -m darkyn.cli --target URL --output laporan.html
-python -m darkyn.cli --target URL --report json --output findings.json
+# 1. Install
+git clone <repo>
+cd darkyn-framework
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# 2. Run
+python -m darkyn.cli
 ```
 
----
+## 📊 Bug Fixes v2.0
 
-## 📚 Documentation
-
-- [Installation Guide](docs/INSTALL.md)
-- [Usage Guide](docs/USAGE.md)
-- [API Reference](docs/API.md)
-- [Bug Fixes v2.0](docs/BUGFIXES.md)
-- [Changelog](CHANGELOG.md)
-- [Contributing](CONTRIBUTING.md)
-
----
-
-## 🧪 Running Tests
-
-```bash
-pip install pytest pytest-cov
-pytest tests/ -v
-pytest tests/ --cov=darkyn --cov-report=term-missing
-```
-
----
-
-## ⚖️ Legal & Ethics
-
-Framework ini dibuat untuk:
-- ✅ Authorized penetration testing dengan izin tertulis
-- ✅ CTF competitions
-- ✅ Security research & education
-- ✅ Bug bounty (sesuai scope program)
-
-**Penggunaan tanpa izin pada sistem orang lain adalah ilegal.**
-
----
-
-## 👤 Author
-
-**Fachri** — Security Researcher & Pentester
-- GitHub: [@Fachri-analys](https://github.com/Fachri-analys)
-- Medium: [@fachrifunandar](https://medium.com/@fachrifunandar)
-
----
-
-## 📜 License
-
-Lihat [LICENSE](LICENSE) untuk detail. Penggunaan hanya untuk authorized testing.
+Lihat `BUGFIXES.md` untuk daftar lengkap perbaikan dari v1.
