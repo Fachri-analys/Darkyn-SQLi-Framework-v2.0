@@ -1,0 +1,32 @@
+# LICENSE
+# Darkyn Framework - Restricted Use License
+
+This software is provided for **authorized security testing purposes only**.
+
+## Permitted Uses:
+- ✅ Authorized penetration testing (with written permission)
+- ✅ Security research and education
+- ✅ CTF competitions
+- ✅ Defensive security analysis
+- ✅ Vulnerability assessment (authorized)
+
+## Prohibited Uses:
+- ❌ Unauthorized access to computer systems
+- ❌ Illegal hacking or data theft
+- ❌ Denial-of-service attacks
+- ❌ Mass targeting without authorization
+- ❌ Commercial use without permission
+- ❌ Modification and redistribution for malicious purposes
+
+## Disclaimer:
+The authors and contributors assume no responsibility for misuse of this software.
+Users are fully responsible for ensuring compliance with all applicable laws and
+regulations in their jurisdiction.
+
+**By using this software, you agree that you have proper authorization from the
+system owner before testing any systems.**
+
+---
+
+Copyright © 2024 Darkyn Contributors
+All rights reserved.

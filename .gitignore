@@ -1,0 +1,103 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual env
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.sublime-project
+.sublime-workspace
+*.code-workspace
+
+# Local config (CRITICAL - NEVER COMMIT!)
+config.local.json
+.env
+.env.local
+.env*.local
+secrets.json
+credentials.json
+*.pem
+*.key
+*.crt
+*.pfx
+api_keys.txt
+
+# Target/victim info (NEVER COMMIT!)
+targets.json
+targets.txt
+results/
+dumps/
+exfil/
+captures/
+logs/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Temp files
+*.tmp
+*.bak
+*.backup
+*~
+.swp
+.swo
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Package
+dist/
+build/
+*.egg-info/
+
+# IDE configuration files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
