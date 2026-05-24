@@ -73,118 +73,46 @@ MANUAL  → Full user-driven, step-by-step
 darkyn-framework/
 ├── darkyn/
 │   ├── core/
-│   │   ├── crypto.py           # AES-256-GCM layer
-│   │   ├── http_client.py      # TLS fingerprint client
-│   │   ├── exceptions.py       # Custom exceptions
-│   │   └── types.py            # Enums & data classes
+│   │   ├── crypto.py           
+│   │   ├── http_client.py     
+│   │   ├── exceptions.py      
+│   │   └── types.py            
 │   ├── attack/
 │   │   ├── __init__.py
-│   │   ├── injection_engine.py       # SQLi detection & exploitation
-│   │   ├── payloads.py               # Payload arsenal
-│   │   ├── polymorphic.py            # Obfuscation engine
-│   │   ├── union_extractor.py        # Union-based extraction
-│   │   ├── time_blind_extractor.py   # Binary search time-based
-│   │   └── dns_tunnel.py             # DNS exfiltration
+│   │   ├── injection_engine.py       
+│   │   ├── payloads.py               
+│   │   ├── polymorphic.py            
+│   │   ├── union_extractor.py       
+│   │   ├── time_blind_extractor.py   
+│   │   └── dns_tunnel.py            
 │   │
-│   ├── cli.py                        # Command-line interface
-│   └── framework.py                  # Main framework class
+│   ├── cli.py                        
+│   └── framework.py                  
 │
 ├── tests/
 │   ├── __init__.py
-│   ├── test_crypto.py                # Quantum crypto tests
-│   ├── test_payloads.py              # Payload tests
-│   ├── test_polymorphic.py           # Obfuscation tests
-│   └── test_binary_search.py         # Binary search algorithm
+│   ├── test_crypto.py                
+│   ├── test_payloads.py             
+│   ├── test_polymorphic.py           
+│   └── test_binary_search.py         
 │
 ├── examples/
-│   ├── basic_usage.py                # Contoh dasar
-│   ├── blind_extraction.py           # Time-based blind demo
-│   └── full_attack.py                # Full automated attack
+│   ├── basic_usage.py               
+│   ├── blind_extraction.py           
+│   └── full_attack.py               
 │
 └── docs/
-    ├── INSTALL.md                    # Installation guide
-    ├── USAGE.md                      # Detailed usage
-    ├── API.md                        # API reference
-    └── BUGFIXES.md                   # Daftar bug fixes v2
-```
-
-## 🔒 .gitignore
-
-```
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual env
-venv/
-ENV/
-env/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Local config (CRITICAL - never commit!)
-config.local.json
-.env
-.env.local
-secrets.json
-credentials.json
-*.pem
-*.key
-*.crt
-
-# Target/victim info (never commit!)
-targets.json
-results/
-dumps/
-exfil/
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Logs
-*.log
-logs/
-```
-
-## 🔧 Requirements
-
-```
-cryptography>=41.0.0
-requests>=2.31.0
-dnspython>=2.4.0
-curl-cffi>=0.5.0  # TLS fingerprint (optional, fallback ke requests)
-pytest>=7.4.0
+    ├── INSTALL.md                    
+    ├── USAGE.md                     
+    ├── API.md                        
+    └── BUGFIXES.md                   
 ```
 
 ## ⚡ Quick Start
 
 ```bash
 # 1. Install
-git clone <repo>
+git clone https://github.com/Fachri-analys/Darkyn-SQLi-Framework-v2.0.git
 cd darkyn-framework
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
