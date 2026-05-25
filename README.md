@@ -79,19 +79,19 @@ darkyn-framework/
 │   │   └── types.py            
 │   ├── attack/
 <<<<<<< HEAD
-│   │   ├── injection_engine.py # SQLi detection
-│   │   ├── payloads.py         # Payload arsenal
-│   │   ├── polymorphic.py      # Obfuscation engine
-│   │   ├── union_extractor.py  # Union-based discovery
-│   │   ├── time_blind_extractor.py # Binary search time-based
-│   │   ├── waf_detector.py     # WAF fingerprinting (15+ vendor)
-│   │   ├── dns_tunnel.py       # DNS exfiltration
-│   │   └── report_generator.py # HTML/JSON reports
-│   ├── cli.py                  # Command-line interface
-│   └── framework.py            # Main framework class
-├── tests/                      # Unit tests (pytest)
-├── examples/                   # Usage examples
-├── docs/                       # Full documentation
+│   │   ├── injection_engine.py 
+│   │   ├── payloads.py         
+│   │   ├── polymorphic.py      
+│   │   ├── union_extractor.py  
+│   │   ├── time_blind_extractor.py 
+│   │   ├── waf_detector.py     
+│   │   ├── dns_tunnel.py       
+│   │   └── report_generator.py 
+│   ├── cli.py                  
+│   └── framework.py           
+├── tests/                      
+├── examples/                   
+├── docs/                       
 ├── requirements.txt
 └── CHANGELOG.md
 ```
@@ -154,7 +154,6 @@ pip install -r requirements.txt
 
 # 2. Run
 python -m darkyn.cli
->>>>>>> 11216dafdcaf368e3c40e0f0333a587ef56cb7af
 ```
 
 ---
@@ -169,14 +168,6 @@ python -m darkyn.cli
 - [Contributing](CONTRIBUTING.md)
 
 ---
-
-## 🧪 Running Tests
-
-```bash
-pip install pytest pytest-cov
-pytest tests/ -v
-pytest tests/ --cov=darkyn --cov-report=term-missing
-```
 
 ---
 
@@ -196,7 +187,7 @@ Framework ini dibuat untuk:
 
 **Fachri** — Security Researcher & Pentester
 - GitHub: [@Fachri-analys](https://github.com/Fachri-analys)
-- Medium: [@fachrifunandar](https://medium.com/@fachrifunandar)
+- Medium: [@fachrifunandar](https://medium.com/@gatauusernameapa)
 
 ---
 
