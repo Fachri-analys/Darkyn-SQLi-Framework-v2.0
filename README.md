@@ -73,11 +73,12 @@ MANUAL  → Full user-driven, step-by-step
 darkyn-framework/
 ├── darkyn/
 │   ├── core/
-│   │   ├── crypto.py           # AES-256-GCM layer
-│   │   ├── http_client.py      # TLS fingerprint client
-│   │   ├── exceptions.py       # Custom exceptions
-│   │   └── types.py            # Enums & data classes
+│   │   ├── crypto.py           
+│   │   ├── http_client.py     
+│   │   ├── exceptions.py      
+│   │   └── types.py            
 │   ├── attack/
+<<<<<<< HEAD
 │   │   ├── injection_engine.py # SQLi detection
 │   │   ├── payloads.py         # Payload arsenal
 │   │   ├── polymorphic.py      # Obfuscation engine
@@ -110,6 +111,50 @@ Setiap scan menghasilkan laporan HTML profesional:
 ```bash
 python -m darkyn.cli --target URL --output laporan.html
 python -m darkyn.cli --target URL --report json --output findings.json
+=======
+│   │   ├── __init__.py
+│   │   ├── injection_engine.py       
+│   │   ├── payloads.py               
+│   │   ├── polymorphic.py            
+│   │   ├── union_extractor.py       
+│   │   ├── time_blind_extractor.py   
+│   │   └── dns_tunnel.py            
+│   │
+│   ├── cli.py                        
+│   └── framework.py                  
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_crypto.py                
+│   ├── test_payloads.py             
+│   ├── test_polymorphic.py           
+│   └── test_binary_search.py         
+│
+├── examples/
+│   ├── basic_usage.py               
+│   ├── blind_extraction.py           
+│   └── full_attack.py               
+│
+└── docs/
+    ├── INSTALL.md                    
+    ├── USAGE.md                     
+    ├── API.md                        
+    └── BUGFIXES.md                   
+```
+
+## ⚡ Quick Start
+
+```bash
+# 1. Install
+git clone https://github.com/Fachri-analys/Darkyn-SQLi-Framework-v2.0.git
+cd darkyn-framework
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
+# 2. Run
+python -m darkyn.cli
+>>>>>>> 11216dafdcaf368e3c40e0f0333a587ef56cb7af
 ```
 
 ---
